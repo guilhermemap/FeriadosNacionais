@@ -6,7 +6,7 @@ namespace FeriadosNacionais;
  * https://toolslick.com/generation/code/class-from-csv
  * (atributo Name adicionados depois pra usar com CsvHelper
  */
-public class Model
+public class CsvFeriado
 {
     [Name("Data")]
     public DateTime Data { get; set; }
@@ -14,7 +14,9 @@ public class Model
     public string DiadaSemana { get; set; }
     [Name("Feriado")]
     public string Feriado { get; set; }
+    //public CsvFeriado() { }
 }
+
 /*
 public class ModelClassMap : ClassMap<Model>
 {

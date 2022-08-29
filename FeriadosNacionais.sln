@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeriadosNacionais", "FeriadosNacionais\FeriadosNacionais.csproj", "{D29AC194-646D-4843-BE2C-D6BA0FA46429}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeriadosNacionaisTests", "FeriadosNacionaisTests\FeriadosNacionaisTests.csproj", "{DE9E06A2-7B00-450D-8D8A-97D0C4BAB65B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{D29AC194-646D-4843-BE2C-D6BA0FA46429}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D29AC194-646D-4843-BE2C-D6BA0FA46429}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D29AC194-646D-4843-BE2C-D6BA0FA46429}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE9E06A2-7B00-450D-8D8A-97D0C4BAB65B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE9E06A2-7B00-450D-8D8A-97D0C4BAB65B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE9E06A2-7B00-450D-8D8A-97D0C4BAB65B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE9E06A2-7B00-450D-8D8A-97D0C4BAB65B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
