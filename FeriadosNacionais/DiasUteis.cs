@@ -22,12 +22,50 @@ public static class DiasUteis
         var csv_orders = csvReader.GetRecords<CsvFeriado>();
         return csv_orders.ToList();
     }
+    static bool DataNaLista(DateTime data)
+    {
+        return Feriados.Find(x => x.Data.Date == data.Date) != null;
+    }
+    static bool IsFDS(DateTime date)
+    {
+        if (date.DayOfWeek == DayOfWeek.Saturday ||
+            date.DayOfWeek == DayOfWeek.Sunday)
+        {
+            return true;
+        }
+        return false;
+    }
     public static bool IsFeriado(DateTime date)
     {
-        return Feriados.Find(x => x.Data.Date == date.Date) != null;
+        if (IsFDS(date))
+        {
+            return true;
+        }
+        return DataNaLista(date);
     }
     public static bool IsDiaUtil(DateTime date)
     {
-        return Feriados.Find(x => x.Data.Date == date.Date) == null;
+        if (IsFDS(date))
+        {
+            return false;
+        }
+        return !DataNaLista(date);
+    }
+    public static DateTime? SomarDiasUteis(DateTime start, int count)
+    {
+        if (count <= 0)
+        {
+            return null;
+        }
+        int somados = 0;
+        while (somados < count)
+        {
+            start = start.AddDays(1);
+            if (IsDiaUtil(start))
+            {
+                somados++;
+            }
+        }
+        return start;
     }
 }
