@@ -28,4 +28,13 @@ public class DiasUteisTests
         var date2 = DateTime.Parse("2022/02/02");
         Assert.IsTrue(DiasUteis.IsDiaUtil(date2));
     }
+
+    [TestMethod()]
+    public void SomarDiasUteisTest()
+    {
+        DateTime inicial = DateTime.Parse("2022/08/29");
+        Console.WriteLine($"{inicial.Date} + 4 dias úteis: {DiasUteis.SomarDiasUteis(inicial, 4).Value.Date} (esperado 2/9/22)");
+        Console.WriteLine($"{inicial.Date} + 6 dias úteis: {DiasUteis.SomarDiasUteis(inicial, 6).Value.Date} (esperando 6/9/22");
+        Console.WriteLine($"{inicial.Date} + 8 dias úteis: {DiasUteis.SomarDiasUteis(inicial, 8).Value.Date} (esperando 9/9/22");
+    }
 }
